@@ -205,6 +205,29 @@ void print_queues(Queue *q1, Queue *q2, Queue *q3, Queue *q4, FILE *output_file)
         if (i < q4->count - 1) printf("-");
     }
     printf("\n");
-
+    
+ // Print the same information to the output file
+    fprintf(output_file, "\nQueue status:\n");
+    fprintf(output_file, "CPU-1 queue (priority-0) (FCFS) : ");
+    for (int i = 0; i < q1->count; i++) {
+        fprintf(output_file, "%s", q1->processes[i].id);
+        if (i < q1->count - 1) fprintf(output_file, "-");
+    }
+    fprintf(output_file, "\nCPU-2 queue (priority-1) (SJF) : ");
+    for (int i = 0; i < q2->count; i++) {
+        fprintf(output_file, "%s", q2->processes[i].id);
+        if (i < q2->count - 1) fprintf(output_file, "-");
+    }
+    fprintf(output_file, "\nCPU-2 queue (priority-2) (RR-q8) : ");
+    for (int i = 0; i < q3->count; i++) {
+        fprintf(output_file, "%s", q3->processes[i].id);
+        if (i < q3->count - 1) fprintf(output_file, "-");
+    }
+    fprintf(output_file, "\nCPU-2 queue (priority-3) (RR-q16) : ");
+    for (int i = 0; i < q4->count; i++) {
+        fprintf(output_file, "%s", q4->processes[i].id);
+        if (i < q4->count - 1) fprintf(output_file, "-");
+    }
+    fprintf(output_file, "\n");
     
 }
