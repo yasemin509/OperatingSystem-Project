@@ -1,0 +1,67 @@
+Process P1 is placed in the queue1 (priority-1) to be assigned to CPU-2.
+Process P2 is queued to be assigned to CPU-1.
+Process P3 is placed in the queue3 (priority-3) to be assigned to CPU-2.
+Process P4 is queued to be assigned to CPU-1.
+Process P5 cannot be queued due to insufficient RAM.
+Process P6 cannot be queued due to insufficient RAM.
+Process P7 is queued to be assigned to CPU-1.
+Process P8 is queued to be assigned to CPU-1.
+Process P9 is queued to be assigned to CPU-1.
+Process P10 cannot be queued due to insufficient RAM.
+Process P11 is queued to be assigned to CPU-1.
+Process P12 cannot be queued due to insufficient RAM.
+Process P13 is placed in the queue3 (priority-3) to be assigned to CPU-2.
+Process P14 cannot be queued due to insufficient RAM.
+Process P15 is placed in the queue1 (priority-1) to be assigned to CPU-2.
+Process P16 cannot be queued due to insufficient RAM.
+Process P17 is queued to be assigned to CPU-1.
+Process P18 is queued to be assigned to CPU-1.
+Process P19 cannot be queued due to insufficient RAM.
+Process P20 is queued to be assigned to CPU-1.
+Process P21 is placed in the queue3 (priority-3) to be assigned to CPU-2.
+Process P22 cannot be queued due to insufficient RAM.
+Process P23 cannot be queued due to insufficient RAM.
+Process P24 cannot be queued due to insufficient RAM.
+Process P25 cannot be queued due to insufficient RAM.
+
+Queue status:
+CPU-1 queue (priority-0) (FCFS) : P2-P4-P7-P8-P9-P11-P17-P18-P20
+CPU-2 queue (priority-1) (SJF) : P1-P15
+CPU-2 queue (priority-2) (RR-q8) : 
+CPU-2 queue (priority-3) (RR-q16) : P3-P13-P21
+
+CPU-1 (FCFS) Processing:
+Process P2 is assigned to CPU-1.
+Process P2 is completed and terminated.
+Process P4 is assigned to CPU-1.
+Process P4 is completed and terminated.
+Process P7 is assigned to CPU-1.
+Process P7 is completed and terminated.
+Process P8 is assigned to CPU-1.
+Process P8 is completed and terminated.
+Process P9 is assigned to CPU-1.
+Process P9 is completed and terminated.
+Process P11 is assigned to CPU-1.
+Process P11 is completed and terminated.
+Process P17 is assigned to CPU-1.
+Process P17 is completed and terminated.
+Process P18 is assigned to CPU-1.
+Process P18 is completed and terminated.
+Process P20 is assigned to CPU-1.
+Process P20 is completed and terminated.
+
+CPU-2 (SJF for priority-1) Processing:
+Process P1 is assigned to CPU-2.
+Process P1 is completed and terminated.
+Process P15 is assigned to CPU-2.
+Process P15 is completed and terminated.
+
+CPU-2 (Round Robin for priority-2) Processing:
+
+CPU-2 (Round Robin for priority-3) Processing:
+Process P3 is assigned to CPU-2.
+Process P3 run for 2 time units and is completed.
+Process P13 is assigned to CPU-2.
+Process P13 run for 2 time units and is completed.
+Process P21 is assigned to CPU-2.
+Process P21 run for 3 time units and is completed.
